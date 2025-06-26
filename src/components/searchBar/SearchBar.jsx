@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 
 export default function SearchBar(props){
     const { searchValue, onChange } = props
@@ -9,7 +10,8 @@ export default function SearchBar(props){
     // console.log(`Search value: ${searchValue}`);
 
     return(
-        <input className="input" type="text" placeholder="Search images..." value={searchValue} onChange={handleSearchChange}></input>
-        
+        <div className="input-container">
+            <input className="input" type="text" placeholder="Search images..." value={searchValue} onChange={handleSearchChange}></input>
+        </div>
     )
 }
