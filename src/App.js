@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ImageList from './components/imageList/ImageList';
 import UploadForm from './components/form/Form';
 import SearchBar from './components/searchBar/SearchBar';
 
 
 function App() {
+  const [images, setImages] = useState([]);
+
+  function handleImageUpload(newImage){
+    setImages([...images, newImage]);
+  }
+
   return (
     <div className="App">
-      <h1>Images Upload App</h1>
-      <UploadForm />
+      <UploadForm onUpload={handleImageUpload} />
       <SearchBar />
       <ImageList />
     </div>
