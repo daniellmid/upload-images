@@ -14,7 +14,7 @@ export function addImageToList(image){
     setImagesToLS(images);
 }
 
-export function deleteImage(id){
+export function deleteImageFromList(id){
     const images = getImagesFromLS().filter(image => image.id !== id);
     setImagesToLS(images);
 }
