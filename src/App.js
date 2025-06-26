@@ -4,7 +4,7 @@ import UploadForm from './components/form/Form';
 import SearchBar from './components/searchBar/SearchBar';
 
 
-function App() {
+export default function App() {
   const [images, setImages] = useState([]);
 
   function handleImageUpload(newImage){
@@ -15,9 +15,7 @@ function App() {
     <div className="App">
       <UploadForm onUpload={handleImageUpload} />
       <SearchBar />
-      <ImageList />
+      <ImageList images={images}/>
     </div>
   );
 }
-
-export default App;
