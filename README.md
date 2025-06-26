@@ -37,7 +37,7 @@ Approx. 8 - 10 hours spread over two days.
 
 ## Things I did not get to finish 
 
-The app is completed.
+The app is complete.
 
 -----------------------------------------------------------
 
