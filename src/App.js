@@ -11,11 +11,14 @@ export default function App() {
     setImages([...images, newImage]);
   }
 
+  function handleDeleteImage(id){
+    setImages(images.filter(image => image.id !== id));
+  }
   return (
     <div className="App">
       <UploadForm onUpload={handleImageUpload} />
       <SearchBar />
-      <ImageList images={images}/>
+      <ImageList images={images} onDelete={handleDeleteImage} />
     </div>
   );
 }
