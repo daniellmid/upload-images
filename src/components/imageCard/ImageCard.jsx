@@ -11,6 +11,7 @@ export default function ImageCard(props){
         <div key={image.id} className="img-card">
             <button onClick={handleDelete} className="delete-button">X</button>
             <img src={image.dataUrl} alt={image.name} className="image" />
+            <p className="label">{image.name}</p>
         </div>
     );
 }

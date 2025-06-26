@@ -1,8 +1,9 @@
 .img-card {
-    display: flex; 
+    display: flex;
+    flex-direction: column;
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     box-shadow: rgb(0, 0, 0) 0px 3px 8px;
     border-radius: 10px;
 }
@@ -32,4 +33,15 @@
     background-color: rgb(161, 4, 4);
     color:rgb(56, 1, 1);
     opacity: 100%;
+}
+
+.label{
+    text-align: center;
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    background:rgb(235, 234, 234)
 }
