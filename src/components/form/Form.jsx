@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react';
+import "./Form.css";
 
 export default function Form(props){
     const { onUpload } = props;
@@ -48,11 +49,12 @@ export default function Form(props){
 
     return(
         <>
-            <div>
-                <input type="file" accept="image/*" onChange={handleFileChange} ref={inputRef} />
-                <button onClick={handleUpload} disabled={!file}>
+            <div className="form-container">
+                <input className="select" type="file" accept="image/*" onChange={handleFileChange} ref={inputRef} />
+                <button className="button" onClick={handleUpload} disabled={!file}>
                     Upload
                 </button>
+                {error && <p className="error">{error}</p>}
             </div>
         </>
     )
